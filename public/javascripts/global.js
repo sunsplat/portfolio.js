@@ -6,6 +6,8 @@ $(document).ready(function() {
 
     // Populate the user table on initial page load
     populateTable();
+    // Username link click
+    $('#userList table tbody').on('click', 'td a.linkshowuser', showUserInfo);
 
 });
 
@@ -47,5 +49,17 @@ function showUserInfo(event) {
 
     // Get Index of object based on id value
     var arrayPosition = userListData.map(function(arrayItem) { return arrayItem.username; }).indexOf(thisUserName);
+    
+     // Get our User Object
+    var thisUserObject = userListData[arrayPosition];
+
+    //Populate Info Box
+    $('#userInfoName').text(thisUserObject.fullname);
+    $('#userInfoAge').text(thisUserObject.age);
+    $('#userInfoGender').text(thisUserObject.gender);
+    $('#userInfoLocation').text(thisUserObject.location);
+
+};
+};
 
 

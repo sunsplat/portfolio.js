@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1.
+    Portfolio
+  ul
+    each item, i in portfolio
+      li
+        a(href="#{item.link}")= item.title
+  input#btnAdd(type="button",onclick="location.href='/newproject'",value="Add New Project")

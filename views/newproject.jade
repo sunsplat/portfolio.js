@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= title
+  form#formAddItem(name="addproject",method="post",action="/addproject")
+    input#inputProjectTitle(type="text", placeholder="Project Title", name="projecttitle")
+    input#inputProjectLink(type="text", placeholder="Project Link", name="projectlink")
+    button#btnSubmit(type="submit") submit

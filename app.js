@@ -5,12 +5,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-//For MongoDB:
-var mongo = require('mongodb');
-var monk = require('monk');
-var db = monk('/portfolio')
 var routes = require('./routes/index');
-var portfolio = require('./routes/portfolio');
+var users = require('./routes/users');
 
 var app = express();
 
@@ -26,14 +22,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//For MongoDB: makes our db accessible to our router
-app.use(function(req,res,next) {
-  req.db = db;
-  next();
-});
-
 app.use('/', routes);
-app.use('/portfolio', portfolio);
+app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -66,7 +56,5 @@ app.use(function(err, req, res, next) {
   });
 });
 
-//our master app exports its app object. A core part of Node is that
-// basically all modules export an object which can easily be called elsewhere
-// in the code.
+
 module.exports = app;

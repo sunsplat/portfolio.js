@@ -8,8 +8,7 @@ html
         link(rel='stylesheet', href='/stylesheets/layout.css')
     body
         div#headerWrapper
-            header#header
-                div#topNavMobile
+            div#topNavMobile
                 div#logo.site-title
                     h1.logo.image
                         a(href='/') Ellen Sun
@@ -17,9 +16,9 @@ html
                     nav#mainNavigation.main-nav.dropdown-click.desktop-nav
                         ul
                             li.gallery-collection.active
-                                a(href='/') Portfolio
+                                a(href='/portfolio') Portfolio
                             li.gallery-collection
-                                a(href='/') Experience
+                                a(href='/experience') Experience
                     nav#secondaryNavigation.main-nav.dropdown-click.desktop-nav
                         ul
                             li.page-collection
@@ -28,21 +27,22 @@ html
                                 a(href='/contact') Contact
                             li.page-collection
                                 a(href='http://cestmonvoyage.wordpress.com', target='_blank') Blog
-                div#headerBlocks.sqs-layout.sql-grid-1.columns-1.empty.Header.Content(type='block-field')
-                    div.row.sqs-row
-                        div.col.sqs-col-1.span-1
-                div#footerBlocks.social-links.sqs-svg-icon--list(content-field='connected-accounts')
+                div#headerBlocks.col-md-1(type='block-field')
+                    div.row
+                        div.col-md-1.col-md-offset-1
+                div#footerBlocks.social-links(content-field='connected-accounts')
                     a.email(href='mailto:ms.esun@gmail.com', target='_blank')
                         i.fa.fa-envelope-o(aria-hidden='true')
                     a.linkedin(href='http://www.linkedin.com/in/msellensun', target='_blank')
-                        i.fa.fa-envelope-o(aria-hidden='true')
+                        i.fa.fa-linkedin(aria-hidden='true')
                     a.twitter(href='http://www.twitter.com/ms_ellerz', target='_blank')
-                        i.fa.fa-envelope-o(aria-hidden='true')
+                        i.fa.fa-twitter(aria-hidden='true')
                     a.github(href='http://www.github.com/sunsplat', target='_blank')
-                        i.fa.fa-envelope-o(aria-hidden='true')
+                        i.fa.fa-github(aria-hidden='true')
         div#pageWrapper.hfeed(role='main')
             block content
         script(src='https://code.jquery.com/jquery-3.1.1.min.js')
         script(src='https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js')
         script(src='https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js')
         script(src='/javascripts/global.js')
+        script(src='/javascripts/masonry.js')

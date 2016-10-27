@@ -2,8 +2,41 @@ doctype html
 html
     head
         title= title
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        link(rel='stylesheet', href='https://opensource.keycdn.com/fontawesome/4.6.3/font-awesome.min.css')
         link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/layout.css')
     body
-        block content
+        div#headerWrapper
+            header#header
+                div#topNavMobile
+                div#logo.site-title
+                    h1.logo.image
+                        a(href='/') Ellen Sun
+                div#topNav.navigation
+                    nav#mainNavigation.main-nav.dropdown-click.desktop-nav
+                        ul
+                            li.gallery-collection.active
+                                a(href='/') Portfolio
+                            li.gallery-collection
+                                a(href='/') Experience
+                    nav#secondaryNavigation.main-nav.dropdown-click.desktop-nav
+                        ul
+                            li.page-collection
+                                a(href='/about') About
+                            li.page-collection
+                                a(href='/contact') Contact
+                            li.page-collection
+                                a(href='http://cestmonvoyage.wordpress.com', target='_blank') Blog
+                div#headerBlocks.sqs-layout.sql-grid-1.columns-1.empty.Header.Content(type='block-field')
+                    div.row.sqs-row
+                        div.col.sqs-col-1.span-1
+                div#footerBlocks.social-links.sqs-svg-icon--list(content-field='connected-accounts')
+                    a.email(href='mailto:ms.esun@gmail.com', target='_blank')
+                        i.fa.fa-envelope-o(aria-hidden='true')
+        div#pageWrapper.hfeed(role='main')
+            block content
         script(src='https://code.jquery.com/jquery-3.1.1.min.js')
+        script(src='https://unpkg.com/masonry-layout@4.1/dist/masonry.pkgd.min.js')
+        script(src='https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js')
         script(src='/javascripts/global.js')

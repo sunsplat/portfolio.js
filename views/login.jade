@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h2= title
+    #userLogin
+        fieldset
+            input#inputUserName(type='text', placeholder='Username')
+            input#inputUserPassword(type='password', placeholder='Password')
+            br
+            button#btnLogin Login

@@ -1,55 +1,22 @@
 extends layout
 
 block content
-    h1= title
-    p Welcome to #{title}
-
-    // Wrapper
-    #wrapper
-
-        // USER INFO
-        #userInfo
-            h2 Project Info
-            p
-                strong Title:
-                |  <span id='userInfoName'></span>
-                br
-                strong Age:
-                |  <span id='userInfoAge'></span>
-                br
-                strong Technologies:
-                |  <span id='userInfoGender'></span>
-                br
-                strong Link:
-                |  <span id='userInfoLocation'></span>
-        // /USER INFO
-
-        // USER LIST
-        h2 Project List
-        #userList
-            table
-                thead
-                    th UserName
-                    th Email
-                    th Delete?
-                tbody
-        // /USER LIST
-        
-        // ADD USER
-        h2 Add Project
-        #addUser
-            fieldset
-                input#inputUserName(type='text', placeholder='Username')
-                input#inputUserEmail(type='text', placeholder='Email')
-                br
-                input#inputUserFullname(type='text', placeholder='Full Name')
-                input#inputUserAge(type='text', placeholder='Age')
-                br
-                input#inputUserLocation(type='text', placeholder='Location')
-                input#inputUserGender(type='text', placeholder='gender')
-                br
-                button#btnAddUser Add User
-        // /ADD USER
-
-
-    // /WRAPPER
+    div#pageWrapper.hfeed(role='main')
+        div.grid
+            div.grid-sizer
+            div.grid-item
+                img(src='https://ellensun.herokuapp.com/assets/images/quote.jpg')
+            div.grid-item
+                img(src='https://ellensun.herokuapp.com/assets/images/hapsit.jpg')
+            div.grid-item
+                img(src='https://ellensun.herokuapp.com/assets/images/hearmeout.jpg')
+            div.grid-item
+                img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/drizzle.jpg')
+            div.grid-item
+                img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/cat-nose.jpg')
+            div.grid-item
+                img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/contrail.jpg')
+            div.grid-item
+                img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/golden-hour.jpg')
+            div.grid-item
+                img(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg')

@@ -10,6 +10,10 @@ router.get('/portfolio', function(req, res, next) {
   res.render('portfolio', { title: 'Ellen\'s Portfolio' });
 });
 
+router.get('/experience', function(req, res, next) {
+  res.render('experience', { title: 'Ellen\'s Resume' });
+});
+
 router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About Ellen' });
 });

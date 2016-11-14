@@ -113,9 +113,10 @@ ul {
 }
 
 #pageWrapper {
-  margin-left: 230px;
+  padding-left: 15px;
+  margin: 0 auto;
   margin-top: 10px;
-  width: auto;
+  max-width: 60em;
 }
 
 /* clear fix */
@@ -125,14 +126,21 @@ ul {
   clear: both;
 }
 
-.grid-sizer,
+/*.grid-sizer,
 .grid-item {
   width: 31%;
+}*/
+.grid {
+  width: 103.125%;
+  overflow: hidden;
+  margin: auto 0;
+  margin-bottom: -1.875em;
 }
 
 .grid-item {
+  width: 30.303%;
   float: left;
-  margin-bottom: 10px;
+  margin-bottom: 0 1.515% 1.875em;
 }
 
 .grid-item img {
@@ -145,7 +153,53 @@ a:hover {
   color: #000000;
 }
 
-@media (max-width: 600px) {
+@media only screen and (min-width: 768px) {
   /* 10 columns for larger screens */
-  .grid-sizer { width: 48%; }
+  .grid-item { 
+    width: 46.876%; 
+    margin-bottom: 0.938em;
+  }
+
+  #headerWrapper {
+    padding: 20px;
+    position: relative;
+    background-color: #ffffff;
+    top: 0px;
+  }
+
+  #pageWrapper {
+    margin-top: 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .social-links a {
+    margin: 0 10px 10px 0;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: #666;
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .grid-item {
+    width: 46.876%
+    margin-bottom: 0.938em;
+  }
+}
+
+@media only screen and (max-width: 20em) {
+  .grid {
+    width: 100%;
+    margin-left: 0;
+  }
+  .grid-item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

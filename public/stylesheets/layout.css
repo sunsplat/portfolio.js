@@ -12,18 +12,8 @@ body {
   line-height: 1.6em;
   text-transform: none;
   letter-spacing: .02em;
-  font-weight: 400;
-  font-style: normal;
   font-size: 14px;
   color: #666;
-}
-
-#headerWrapper {
-  position: fixed;
-  top: 50px;
-  left: 50px;
-  width: 180px;
-  z-index: 999;
 }
 
 a {
@@ -31,14 +21,8 @@ a {
   color: #121212;
 }
 
-#header {
-  padding: 0;
-}
-
 h1 {
   font-size: 26px;
-  font-family: 'Muli', sans-serif;
-  text-transform: none;
   font-weight: 500;
   font-style: normal;
   color: #ff6666;
@@ -61,14 +45,11 @@ h1 {
 }
 
 .main-nav {
-  overflow: hidden;
   font-size: 16px;
   margin-top: 20px;
 }
 
 .main-nav a {
-  font-family: 'Muli', sans-serif;
-  line-height: 1.6em;
   display: block;
   letter-spacing: 0em;
   text-transform: none;
@@ -78,7 +59,19 @@ h1 {
 }
 
 nav {
+  /*display inline will make mobile nav bar small square in top left corner */
   display: block;
+}
+
+nav.navbar-default {
+  display: inline-block;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  background-color: #fff;
+  height: 100vh;
+  width: auto;
+  padding: 50px 20px;
 }
 
 nav ul {
@@ -87,18 +80,8 @@ nav ul {
   padding: 0;
 }
 
-ul {
-  font-family: 'Muli', sans-serif;
-  line-height: 1.6em;
-  text-transform: none;
-  letter-spacing: .02em;
-  font-weight: 400;
-  font-style: normal;
-}
-
 #secondaryNavigation.main-nav {
-  font-size: 13px;
-  
+  font-size: 13px;  
 }
 
 .social-links a {
@@ -113,9 +96,11 @@ ul {
 }
 
 #pageWrapper {
-  padding-left: 15px;
+  display: inline-block;
+  /*flex: 1;*/
+  position: relative;
   margin: 0 auto;
-  margin-top: 10px;
+/*  margin-top: 10px;*/
   max-width: 60em;
 }
 
@@ -131,7 +116,7 @@ ul {
   width: 31%;
 }*/
 .grid {
-  width: 103.125%;
+  width: 90%;
   overflow: hidden;
   margin: auto 0;
   margin-bottom: -1.875em;
@@ -183,12 +168,19 @@ a:hover {
     overflow: hidden;
     color: #666;
   }
-}
 
+
+}
 @media only screen and (max-width: 40em) {
   .grid-item {
     width: 46.876%
     margin-bottom: 0.938em;
+  }
+  #headerWrapper {
+    padding: 20px;
+    position: relative;
+    background-color: #ffffff;
+    top: 0px;
   }
 }
 
@@ -201,5 +193,11 @@ a:hover {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+  }
+  #headerWrapper {
+    padding: 20px;
+    position: relative;
+    background-color: #ffffff;
+    top: 0px;
   }
 }

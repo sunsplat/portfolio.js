@@ -4,7 +4,7 @@ var grid = document.querySelector('.grid');
 var msnry;
 var columns = 3;
 var setColumns = function() {
-	columns = window.innerWidth > 640 ? 3 : window.innerWidth > 320 ? 2 : 1;
+	columns = window.outerWidth > 640 ? 3 : window.outerWidth > 320 ? 2 : 1;
 	console.log(columns);
 };
 setColumns();

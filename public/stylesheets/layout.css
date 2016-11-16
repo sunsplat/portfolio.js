@@ -38,6 +38,10 @@ h1 {
 
 #logo {
   margin-bottom: 30px;
+  padding: 50px 20px;
+  border-style: double;
+  border-color: #666;
+  text-align: center;
 }
 
 #topNav {
@@ -54,6 +58,7 @@ h1 {
   letter-spacing: 0em;
   text-transform: none;
   padding: .2em;
+  padding-left: 20px;
   color: #666;
   text-decoration: none;
 }
@@ -95,13 +100,14 @@ nav ul {
   color: #666;
 }
 
-#pageWrapper {
-  display: inline-block;
-  /*flex: 1;*/
-  position: relative;
-  margin: 0 auto;
-/*  margin-top: 10px;*/
-  max-width: 60em;
+.grid-sizer,
+.grid-item {
+  width: 31%;
+}
+
+.grid-item {
+  float: right;
+  margin-bottom: 10px;
 }
 
 /* clear fix */
@@ -109,23 +115,6 @@ nav ul {
   content: '';
   display: block;
   clear: both;
-}
-
-/*.grid-sizer,
-.grid-item {
-  width: 31%;
-}*/
-.grid {
-  width: 90%;
-  overflow: hidden;
-  margin: auto 0;
-  margin-bottom: -1.875em;
-}
-
-.grid-item {
-  width: 30.303%;
-  float: left;
-  margin-bottom: 0 1.515% 1.875em;
 }
 
 .grid-item img {
@@ -138,66 +127,10 @@ a:hover {
   color: #000000;
 }
 
-@media only screen and (min-width: 768px) {
-  /* 10 columns for larger screens */
-  .grid-item { 
-    width: 46.876%; 
-    margin-bottom: 0.938em;
-  }
 
-  #headerWrapper {
-    padding: 20px;
-    position: relative;
-    background-color: #ffffff;
-    top: 0px;
-  }
-
-  #pageWrapper {
-    margin-top: 10px;
-    margin-left: 0;
-    margin-right: 0;
-  }
-
-  .social-links a {
-    margin: 0 10px 10px 0;
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    overflow: hidden;
-    color: #666;
-  }
-
-
-}
-@media only screen and (max-width: 40em) {
-  .grid-item {
-    width: 46.876%
-    margin-bottom: 0.938em;
-  }
-  #headerWrapper {
-    padding: 20px;
-    position: relative;
-    background-color: #ffffff;
-    top: 0px;
-  }
-}
-
-@media only screen and (max-width: 20em) {
+@media only screen and (max-width : 399px),
+only screen and (max-device-width : 399px){
   .grid {
-    width: 100%;
-    margin-left: 0;
-  }
-  .grid-item {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  #headerWrapper {
-    padding: 20px;
-    position: relative;
-    background-color: #ffffff;
-    top: 0px;
+    width: 200px;
   }
 }

@@ -9,18 +9,18 @@ html
         link(rel='stylesheet', href='/stylesheets/about.css')
     body
         div#wrapper
-            nav.navbar-default
+            nav.navbar.navbar-default#navigation
                 div#topNavMobile.container-fluid
-                    div#mobileNav.navbar-header
+                    div
                         button(type='button', data-toggle="collapse", data-target='#headerWrapper', aria-expanded='false').navbar-toggle.collapsed
                             span.sr-only Toggle navigation
                             span.icon-bar
                             span.icon-bar
                             span.icon-bar
-                    div#headerWrapper.navigation.collapse.navbar-collapse
+                    div#headerWrapper.collapse.navbar-collapse
                         div#topNav
-                            div#logo.site-title
-                                h1.logo.image
+                            div#logo
+                                h1.logo
                                     a(href='/') Ellen Sun
                             nav#mainNavigation.main-nav
                                 ul

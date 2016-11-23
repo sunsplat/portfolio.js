@@ -1,0 +1,170 @@
+/* http://www.samrayner.com/bootstrap-side-navbar/ */
+
+nav {
+  float: left;
+}
+
+.navbar-nav {
+  float: none;
+}
+
+nav.navbar-default {
+  display: inline-block;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  background-color: #fff;
+  height: 100vh;
+  width: auto;
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+.navbar-brand {
+  text-align: center;
+  font-size: 2em;
+  padding: 20px 20px 40px 20px;
+  border: medium double #A9A9A9;
+  margin-bottom: 20px;
+}
+
+.navbar-primary li {
+  display: block;
+  width: 100%;
+}
+
+.navbar-primary li a {
+  padding: 15px;
+  font-size: 15px;
+}
+
+.navbar-secondary li {
+  display: block;
+  width: 100%;
+  font-size: 13px;
+  padding-left: 0;
+}
+
+.navbar-secondary li a {
+  padding-bottom: 0;
+  padding-left: 15px;
+}
+
+.navbar-social {
+  margin-top: 10px;
+}
+
+.navbar-social li {
+  display: inline;
+}
+
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+  
+  nav {
+    height: auto;
+  }
+
+  .navbar-brand {
+    text-align: left;
+    font-size: 3em;
+    position: fixed;
+    top: 10;
+    border: none;
+    font-size: 2em;
+    width: auto;
+    top: 10px;
+    padding: 0;
+    margin-top: 8px;
+    margin-left: 15px;
+  }
+    
+  .navbar-default {
+    padding: 0;
+    margin-left: 0;
+  }
+  
+  .navbar-primary {
+    text-align: center;
+  }
+  
+  .navbar-secondary {
+    text-align: center;
+  }
+    
+  .navbar-social {
+    margin-top: 10px; 
+    text-align: center;
+  }
+  
+  .navbar-social li a {
+    display: inline;
+  }
+}
+
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+    .navbar-social {
+       margin-left: 15px;
+    }
+
+    .navbar-social li {
+      display: inline;
+    }
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer,
+.grid-item {
+  width: 31%;
+}
+
+.grid-item {
+  float: right;
+  margin-bottom: 10px;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 600px) {
+  /* 10 columns for larger screens */
+  .grid-sizer { width: 48%; }
+}
+
+@media only screen and (max-width : 399px),
+only screen and (max-device-width : 480px){
+
+  #pageWrapper {
+    margin-left: 0;
+    float: left;
+  }
+  
+  .grid-sizer,
+  .grid-item {
+    width: 100%;
+  }
+
+  .grid-item img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
+  

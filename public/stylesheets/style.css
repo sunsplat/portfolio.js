@@ -1,6 +1,19 @@
+* { 
+  box-sizing: border-box; 
+}
+
+/* force scrollbar */
+html { 
+  overflow-y: scroll; 
+}
+
 body {
-    padding: 30px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Muli', sans-serif;
+  line-height: 1.6em;
+  text-transform: none;
+  letter-spacing: .02em;
+  font-size: 14px;
+  color: #666;
 }
 
 h2 {
